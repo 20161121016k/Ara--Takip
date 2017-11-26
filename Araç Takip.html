@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Araç Takip Portalı</title>
+  <meta charset="UTF-8">
+  <meta adsoyad="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title> styles </title>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <style>
+        h1.intro {
+            color: darkred;
+        }
+        body {
+    background-color: gray;
+}
+         footer.intro{
+             color: darkred
+            
+         }
+        p.lead {
+            color: darkblue;
+        }
+          
+
+        textarea
+        {
+        resize:none;
+        }
+        </style>
+</head>
+<body>
+ <div class="container">
+        <div class="row">
+                <div class="col-md-12">
+               <nav class="navbar navbar-default bg-default">
+    <a class="navbar-brand">Araç Takip Portalı </a>
+    <form class="form-inline">
+            <button id="btnkayıt" style="margin-right: 5px; margin-top: 10px;" class="btn btn-success btn-sm">Yeni Kayıt</button>
+            <button id="btngiriş" style="margin-top: 10px;" class="btn btn-success btn-sm">Giriş Yap</button>
+            
+    </form>
+        </nav>
+        <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+                <h1 class="intro">Araç Takip Portalı</h1>
+                <p class="lead">Araç Takip firmalarını ve güncel araç listelerini sistemimiz üzerinden takip edebilirsiniz.</p>
+                 </div>
+              </div>
+              <div  class="col-md-6" style="margin-left: 280px;" > 
+                   
+                <form>
+                            <div class="form-group">
+                             <center><label>İl Seçiniz</label></center> 
+                              <select class="form-control">
+                                <option>Antalya</option>
+                              </select>
+                            </div>
+                            <div class="form-group" >
+                              <center><label>İlçe Seçiniz</label></center>
+                              <select class="form-control">
+                              <option>Alanya</option>
+                                <option>Belek</option>
+                                <option>Kemer</option>
+                                <option>Manavgat</option>
+                                <option>Finike</option>
+                              </select>
+                            </div>
+                            <div class="form-group" >
+                                    <center><label>Marka</label></center>
+                                    <select class="form-control" >
+                                      <option>Mercedes</option>
+                                      <option>BMW</option>
+                                    </select>
+                                  </div>
+                              
+                            <div class="form-group" >
+                              <center><label>Model</label></center>
+                              <select class="form-control" >
+                                <option>Mercedes CLA Serisi 180 D 1.5 AMG</option>
+                                <option>Mercedes CLA Serisi 180 D 1.5 Comfort</option>
+                                <option>Mercedes CLA Serisi 180 D 1.5 Urban</option>
+                                <option>BMW M2 Coupé</option>
+                                <option>BMW 330e plug-in hybrid</option>
+                                <option>BMW M6 Gran Coupé</option>
+                              </select>
+                            </div>
+                            <button id="btnArama" type="button" class="btn btn-primary btn-lg" style="margin-left: 220px;">Arama Yap</button>
+                            
+                          </form>
+
+     <div id="kayıtForm" class="alert alert-danger">
+                    <div class="col-md-12">
+                    <h2>Kayıt Formu</h1>
+                        <label>Adı Soyadı</label>
+                        <input type="text" class="form-control">
+                        <label>E-Posta</label>
+                        <input type="text" class="form-control">
+                        <label>Takip Ettiğiniz Araçlar</label>
+                        <textarea class="form-control" rows="4"> </textarea>
+                        <br>
+                        <button id="btnGonder" class="btn btn-success "style="margin-top: 10px;">Gönder</button>
+                        <button id="btnVazgec" class="btn btn-danger"style="margin-top: 10px;">Vazgeç</button>
+                        <button id="btnTemizle" class="btn btn-warning"style="margin-top: 10px;">Temizle</button>
+                      </div>
+            </div>
+              </div>
+    
+           </div>
+
+        </div>
+
+      </div>
+      
+<script src="js/jquery-3.2.1.js"></script>
+    <script>
+            $(function(){
+ 
+            $(function () {
+              $("#kayıtForm").css({
+                "width": "300px",
+                "position": "fixed",
+                "top": "-500px",
+                "left": "500px"
+                
+        
+              });
+        
+              $("#btnkayıt").click(function () {
+                $("#kayıtForm").animate({
+                  "top": "100px",
+                  "left": "500px"
+        
+                }, 1000);
+                return false;
+              });
+              $("#btnGonder").click(function(){
+                 alert ("Kaydınız Tamamlanmıştır..!");
+                 $("#kayıtForm").animate({
+                  "top": "-500px",
+                  "left": "500px"
+                }, 1001);
+                $("#btnTemizle").click();
+    
+              
+
+ });
+              $("#btnVazgec").click(function () {
+                $("#kayıtForm").animate({
+                  "top": "-500px",
+                  "left": "500px"
+        
+                }, 1000);
+                $("#btnTemizle").click();
+        
+                return false;
+              });
+        
+              $("#btnTemizle").click(function () {
+                $("input:text, textarea").val("");
+                return false;
+                
+              });
+              $("#btnArama").click(function(){
+                 alert ("Arama Kriterleri İçerisinde Kiralık Araç Bulunamadı..");
+                });
+            });
+        });
+          </script>
+</body>
+       <nav class="navbar navbar-default bg-default" style="margin-top: 20px" > 
+           <footer class="intro" style="margin-top: 10px;">
+            <div class="container">
+              <div class="col">
+                  <span class="text-muted">Araç Takip Portalı  |  2017</span>
+              </div>
+            </div>
+          </footer>
+        </nav>
+
+</html>

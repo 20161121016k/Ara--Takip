@@ -1,0 +1,158 @@
+ <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Araç Takip Portalı</title>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+  <body>
+    <div class="container">
+        <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand text-white">Rent A Car</a>
+        <form class="form-inline">
+          <button style="margin-right: 5px;" class="btn btn-outline-success btn-sm" type="button" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Yeni Kayıt</button>
+          <button class="btn btn-outline-success btn-sm" type="button">Giriş</button>
+        </form>
+      </nav>
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-3">Rent A Car</h1>
+          <p class="lead">Rent A Car firmalarını ve güncel araç listelerini sistemimiz üzerinden takip edebilirsiniz.</p>
+        </div>
+      </div>
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="firma-tab" data-toggle="tab" href="#firma" role="tab" aria-controls="firma" aria-selected="true">Firma Arama</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="arac-tab" data-toggle="tab" href="#arac" role="tab" aria-controls="arac" aria-selected="false">Araç Arama</a>
+          </li>
+        </ul>
+
+
+        <div class="tab-content" id="myTabContent">
+          <div class="tab-pane fade show active" id="firma" role="tabpanel" aria-labelledby="firma-tab">
+            <div class="col">
+                <form>
+                  <div class="form-group">
+                    <label for="exampleFormControlSelect1">İl Seçiniz</label>
+                    <select class="form-control" id="exampleFormControlSelect1">
+                      <option>Ankara</option>
+                      <option>Antalya</option>
+                      <option>İzmir</option>
+                      <option>İstanbul</option>
+                      <option>Bursa</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleFormControlSelect2">İlçe Seçiniz</label>
+                    <select class="form-control" id="exampleFormControlSelect2">
+                      <option>Ankara</option>
+                      <option>Antalya</option>
+                      <option>İzmir</option>
+                      <option>İstanbul</option>
+                      <option>Bursa</option>
+                    </select>
+                  </div>
+                    <div class="alert alert-info alert-dismissible fade show" role="alert">
+                      <strong>Araç</strong> veya <strong>Firma</strong> ismiyle arama yapın!
+                      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                  <div class="form-group">
+                    <label for="exampleFormControlSelect3">Firma Adı</label>
+                    <select multiple class="form-control" id="exampleFormControlSelect3">
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </select>
+                  </div>
+                  <button type="button" class="btn btn-primary btn-lg btn-block">Arama Yap</button>
+                </form>
+            </div>
+          </div>
+
+          <div class="tab-pane fade" id="arac" role="tabpanel" aria-labelledby="arac-tab">
+              <div class="form-group">
+                <label for="exampleFormControlSelect4">Araç Seçin</label>
+                <select multiple class="form-control" id="exampleFormControlSelect4">
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="exampleFormControlTextarea1">Example textarea</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+              </div>
+          </div>
+        </div>
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <div class="col">
+            <span class="text-muted">Rent A Car | 2017</span>
+        </div>
+      </div>
+    </footer>
+
+
+   
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Yeni Kayıt</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="validationServer01">Adınız</label>
+            <input type="text" class="form-control is-valid" id="validationServer01" placeholder="Adınız" required>
+          </div>
+          <div class="form-group">
+           <label for="validationServer02">Soyadınız</label>
+           <input type="text" class="form-control is-valid" id="validationServer02" placeholder="Soyadınız" required>
+          </div>
+          <div class="form-group">
+           <label for="validationServer03">Şehir</label>
+           <input type="text" class="form-control is-invalid" id="validationServer03" placeholder="Şehir" required>
+         
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Vazgeç</button>
+        <button type="button" class="btn btn-primary">Kayıt ol!</button>
+      </div>
+    </div>
+  </div>
+</div>
+   
+    <script type="text/javascript">
+      $('#exampleModal').on('show.bs.modal', function (event) {
+  var button = $(event.relatedTarget) 
+  var recipient = button.data('whatever')
+  var modal = $(this)
+  modal.find('.modal-title').text('New message to ' + recipient)
+  modal.find('.modal-body input').val(recipient)
+})
+    </script>
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+  </body>
+</html>
